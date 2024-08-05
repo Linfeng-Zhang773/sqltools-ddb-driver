@@ -53,6 +53,7 @@ export async function activate(extContext: ExtensionContext): Promise<IDriverExt
       //     connInfo.database = `\$\{workspaceFolder:${dbWorkspace.name}\}/${workspace.asRelativePath(connInfo.database, false)}`;
       //   }
       // }
+      
       return connInfo;
     },
     parseBeforeEditConnection: ({ connInfo }) => {

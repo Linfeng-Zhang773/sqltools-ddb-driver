@@ -1,7 +1,7 @@
 {
-  "name": "driver-template",
-  "displayName": "Driver Template",
-  "description": "Driver Template to be used as base for new VSCode SQLTools drivers",
+  "name": "sqltools-ddb-driver",
+  "displayName": "dolphin ddb driver",
+  "description": "driver for dolphin db to be used for VSCode SQLTools extensions",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.42.0"

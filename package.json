@@ -34,6 +34,7 @@
     "onCommand:sqltools.*"
   ],
   "main": "./out/extension.js",
+  "type": "module",
   "dependencies": {
     "@sqltools/base-driver": "latest",
     "@sqltools/types": "latest",

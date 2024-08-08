@@ -17,7 +17,7 @@ import queryFactory from '@sqltools/base-driver/dist/lib/factory';
  */
 
 const describeTable: IBaseQueries['describeTable'] = queryFactory` 
-   
+    t.schema().colDefs
 `;
 
 const fetchColumns: IBaseQueries['fetchColumns'] = queryFactory`
@@ -66,6 +66,10 @@ const searchTables: IBaseQueries['searchTables'] = queryFactory`
 
 `;
 
+const fetchFunctions: IBaseQueries['fetchFunctions'] = queryFactory`
+
+`;
+
 
 export default
 {
@@ -78,4 +82,5 @@ export default
     fetchTables,
     searchColumns,
     searchTables,
+    fetchFunctions
 }

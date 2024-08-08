@@ -17,7 +17,7 @@ import queryFactory from '@sqltools/base-driver/dist/lib/factory';
  */
 
 const describeTable: IBaseQueries['describeTable'] = queryFactory` 
-    t.schema().colDefs
+    
 `;
 
 const fetchColumns: IBaseQueries['fetchColumns'] = queryFactory`

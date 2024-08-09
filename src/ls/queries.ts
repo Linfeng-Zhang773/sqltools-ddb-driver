@@ -1,5 +1,5 @@
-import { IBaseQueries, ContextValue} from '@sqltools/types';
-import queryFactory from '@sqltools/base-driver/dist/lib/factory';
+import { IBaseQueries, ContextValue, NSDatabase} from '@sqltools/types';
+
 
 /** write your queries here go fetch desired data. */
 /** IbaseQueries interfeace:
@@ -16,60 +16,46 @@ import queryFactory from '@sqltools/base-driver/dist/lib/factory';
   fetchFunctions?: QueryBuilder<NSDatabase.ISchema, NSDatabase.IFunction>;
  */
 
-const describeTable: IBaseQueries['describeTable'] = queryFactory` 
+const describeTable: IBaseQueries['describeTable'] = DDBqueryFactory()
+{
     
-`;
+}
+const fetchColumns: IBaseQueries['fetchColumns'] = DDBqueryFactory()
+{
 
-const fetchColumns: IBaseQueries['fetchColumns'] = queryFactory`
+}
+const fetchRecords: IBaseQueries['fetchRecords'] = DDBqueryFactory()
+{
 
+}
+const countRecords: IBaseQueries['countRecords'] = DDBqueryFactory()
+{
 
-`;
+}
+const fetchSchemas: IBaseQueries['fetchSchemas'] = DDBqueryFactory()
+{
 
-const fetchRecords: IBaseQueries['fetchRecords'] = queryFactory`
+}
+const fetchDatabases: IBaseQueries['fetchDatabases'] = DDBqueryFactory()
+{
+  
+}
+const fetchTables: IBaseQueries['fetchTables'] = DDBqueryFactory()
+{
 
+}
+const searchColumns:IBaseQueries['searchColumns'] = DDBqueryFactory()
+{
 
-`;
+}
+const searchTables: IBaseQueries['searchTables'] = DDBqueryFactory()
+{
 
-const countRecords: IBaseQueries['countRecords'] = queryFactory`
+}
+const fetchFunctions: IBaseQueries['fetchFunctions'] = DDBqueryFactory()
+{
 
-
-`;
-
-const fetchSchemas: IBaseQueries['fetchSchemas'] = queryFactory`
-
-
-
-`;
-
-const fetchDatabases: IBaseQueries['fetchDatabases'] = queryFactory`
-
-
-`;
-
-
-const fetchTables: IBaseQueries['fetchTables'] = queryFactory`
-
-
-
-`;
-
-
-const searchColumns:IBaseQueries['searchColumns'] = queryFactory`
-
-
-
-`;
-
-const searchTables: IBaseQueries['searchTables'] = queryFactory`
-
-
-
-`;
-
-const fetchFunctions: IBaseQueries['fetchFunctions'] = queryFactory`
-
-`;
-
+}
 
 export default
 {

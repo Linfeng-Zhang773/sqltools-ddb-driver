@@ -1,5 +1,5 @@
 import { ddbConfig } from "./dolphindbTypes";//导入链接配置接口
-import {DDB} from 'dolphindb';//导入API
+import {DDB} from 'dolphindb'//导入API
 
 
 /**

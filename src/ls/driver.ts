@@ -1,5 +1,5 @@
 import { createDDBClient } from './dolphindbFactory';
-import {DDB} from 'dolphindb';//import from dolphindb lib
+import {DDB} from 'dolphindb'//import from dolphindb lib
 import {ddbConfig } from './dolphindbTypes';
 import AbstractDriver from '@sqltools/base-driver';
 import { IConnection,LSIConnection } from '@sqltools/types';

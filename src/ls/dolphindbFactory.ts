@@ -20,4 +20,3 @@ export async function createDDBClient(configOptions: ddbConfig) : Promise<DDB>{
     return ddb;    
 }
 
-export const DDBqueryFactory = 

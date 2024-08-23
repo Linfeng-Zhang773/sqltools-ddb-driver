@@ -46,7 +46,7 @@ export async function activate(extContext: ExtensionContext): Promise<IDriverExt
        * Below is the exmaple for SQLite, where we save the DB path relative to workspace
        * and later we transform it back to absolute before editing
        */
-       const relativePath =                                                                                                                                                                                                                     
+      //  const relativePath =                                                                                                                                                                                                                     
       
       return connInfo;
     },

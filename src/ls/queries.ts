@@ -1,4 +1,4 @@
-import { IBaseQueries, ContextValue, NSDatabase} from '@sqltools/types';
+import { IBaseQueries, ContextValue} from '@sqltools/types';
 import queryFactory from '@sqltools/base-driver/dist/lib/factory'
 
 
@@ -33,13 +33,13 @@ dolphinDB数据目录：catalog->databse->table
 const fetchColumns: IBaseQueries['fetchColumns'] = queryFactory
 `
     SELECT 
-    X.name as label,
-    X.typeString as DataType,
-    X.typeInt as DataTypeInt,
-    '${ContextValue.COLUMN}' as type,
-    X.extra as extras,
-    X.comment as comments
-    FROM ${(p)=>p.database}.${(p)=>p.table||p.table.label}.schema().colDefs as X
+    X.name AS label,
+    X.typeString AS DataType,
+    X.typeInt AS DataTypeInt,
+    '${ContextValue.COLUMN}' AS type,
+    X.extra AS extras,
+    X.comment AS comments
+    FROM ${(p)=>p.database}.${(p)=>p.table||p.table.label}.schema().colDefs AS X
     ORDER BY X.dataTypeInt ASC
 `;
 /*syntax : SELECT * FROM C limit 1,3
@@ -77,8 +77,22 @@ const fetchDatabases: IBaseQueries['fetchDatabases'] = queryFactory
 // `
     
 // `;
-
+/*
+not done yet, logics may wrong, also two extract functions need to be implemented
+ */
 const fetchTables: IBaseQueries['fetchTables'] = queryFactory
+`
+    T = table(extractTable(getClusterDFSDatabases()) AS name, extractDatabases(getClusterDFSDatabases()) AS database)
+    SELECT 
+    T.name AS label,
+    T.database AS database,
+    '${ContextValue.TABLE}' AS type,
+    FROM T
+    ORDER BY T.name
+`;
+
+
+const searchTables: IBaseQueries['searchTables'] = queryFactory
 `
     
 `;
@@ -88,10 +102,7 @@ const searchColumns:IBaseQueries['searchColumns'] = queryFactory
 
 `;
 
-const searchTables: IBaseQueries['searchTables'] = queryFactory
-`
 
-`;
 
 const fetchFunctions: IBaseQueries['fetchFunctions'] = queryFactory
 `

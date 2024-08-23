@@ -5,7 +5,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
-    "lib": ["es6"],
+    "lib": ["ES6"],
     "module": "commonjs",
     "noEmit": false,
     "removeComments": true,
@@ -13,14 +13,11 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "declaration": false,
-    "target": "esnext",
+    "target": "ESnext",
 		"outDir": "out"
   },
   "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts",
-    "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules"

@@ -4,25 +4,27 @@
   "description": "driver for dolphin db to be used for VSCode SQLTools extensions",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.42.0"
+    "vscode": "^1.42.0",
+    "node": "^22.7.0"
   },
   "author": "Linfeng Zhang <linfeng.zhang@dolphindb.com>",
   "publisher": "Linfeng Zhang",
   "license": "MIT",
-  "homepage": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Linfeng-Zhang773/sqltools-ddb-driver.git"
   },
   "bugs": {},
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./"
+    "watch": "tsc -watch -p ./",
+    "test": "node ./out/test/runTest.js"
   },
   "keywords": [
-    "driver-template",
-    "sqltools-driver"
+    "dolphindb",
+    "sqltools-driver",
+    "ddb"
   ],
   "categories": [
     "Programming Languages",
@@ -39,11 +41,11 @@
     "onCommand:sqltools.*"
   ],
   "main": "./out/extension.js",
-  "type": "module",
   "dependencies": {
     "@sqltools/base-driver": "latest",
     "@sqltools/types": "latest",
     "dolphindb": "3.0.112",
+    "esm": "^3.2.25",
     "uuid": "^10.0.0"
   },
   "devDependencies": {

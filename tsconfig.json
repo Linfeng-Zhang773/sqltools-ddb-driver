@@ -5,7 +5,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
-    "lib": ["ES2022","ES2022.Error"],
+    "lib": ["ES2022"],
     "module": "commonjs",
     "noEmit": false,
     "removeComments": true,
@@ -13,8 +13,9 @@
     "sourceMap": true,
     "skipLibCheck": true,
     "declaration": false,
-    "target": "ESnext",
-		"outDir": "out"
+    "moduleResolution": "Node",
+    "target": "ESNext",
+		"outDir": "dist"
   },
   "include": [
     "src/**/*"

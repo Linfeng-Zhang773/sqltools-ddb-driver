@@ -13,8 +13,5 @@ export interface ddbConfig
     port:number,
     autolog : boolean,
     username : string,
-    password : string,
-    py : boolean,
-    stream : undefined
+    password : string
 }
-

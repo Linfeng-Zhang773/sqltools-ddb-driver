@@ -94,19 +94,19 @@ const fetchTables: IBaseQueries['fetchTables'] = queryFactory
 
 const searchTables: IBaseQueries['searchTables'] = queryFactory
 `
-    
+    SELECT T.name as label,
+    T.
+    FROM ... AS T
 `;
 
 const searchColumns:IBaseQueries['searchColumns'] = queryFactory
 `
-
+    SELECT 
 `;
-
-
 
 const fetchFunctions: IBaseQueries['fetchFunctions'] = queryFactory
 `
-
+    
 `;
 
 export default

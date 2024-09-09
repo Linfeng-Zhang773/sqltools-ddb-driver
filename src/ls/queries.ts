@@ -1,6 +1,6 @@
 import { IBaseQueries, ContextValue} from '@sqltools/types';
 import queryFactory from '@sqltools/base-driver/dist/lib/factory'
-
+//名模板字符串需要完成
 
 /** write your queries here go fetch desired data. */
 /** IbaseQueries interfeaces:
@@ -44,7 +44,7 @@ const fetchColumns: IBaseQueries['fetchColumns'] = queryFactory
 `;
 /*syntax : SELECT * FROM C limit 1,3
 1= rawoffset, 3 = rawlimit
-暂时先这样写*/
+*/
 const fetchRecords: IBaseQueries['fetchRecords'] = queryFactory
 `
     SELECT *
@@ -58,28 +58,15 @@ const countRecords: IBaseQueries['countRecords'] = queryFactory
 `
     SELECT count(${(p)=>p.database}.${(p)=>p.table||p.table.label}.) AS total
 `;
-/*
-getClusterDFSDatabases()返回database的路径，怎么extract成只有名字，暂定这样写
-*/
+
 const fetchDatabases: IBaseQueries['fetchDatabases'] = queryFactory
 `
-    D = table(getClusterDFSDatabases() AS name)
-    SELECT
-    D.name AS label,
-    D.name AS database,
-    '${ContextValue.DATABASE}' AS type,
-    'database' AS detail
-    FROM D
-    ORDER BY D.name;
-`;
-
-// const fetchSchemas: IBaseQueries['fetchSchemas'] = queryFactory
-// `
+   
+`
+ const fetchSchemas: IBaseQueries['fetchSchemas'] = queryFactory
+`
     
-// `;
-/*
-not done yet, logics may wrong, also two extract functions need to be implemented
- */
+`
 const fetchTables: IBaseQueries['fetchTables'] = queryFactory
 `
     T = table(extractTable(getClusterDFSDatabases()) AS name, extractDatabases(getClusterDFSDatabases()) AS database)
@@ -108,7 +95,7 @@ const fetchFunctions: IBaseQueries['fetchFunctions'] = queryFactory
 `
     
 `;
-
+//需要完成输出的字符串模板
 export default
 {
     describeTable,
@@ -116,7 +103,7 @@ export default
     fetchRecords,
     countRecords,
     fetchDatabases,
-    //fetchSchemas,
+    fetchSchemas,
     fetchTables,
     searchColumns,
     searchTables,

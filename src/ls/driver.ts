@@ -4,10 +4,10 @@ import {ddbConfig } from './dolphindbTypes';
 import AbstractDriver from '@sqltools/base-driver';
 import { IConnection,LSIConnection } from '@sqltools/types';
 import queries from './queries';
-// import { NSDatabase } from '@sqltools/types';
-import { IConnectionDriver, /*MConnectionExplorer, ContextValue, Arg0 */} from '@sqltools/types';
-// import { v4 as generateId } from 'uuid';
-// import keywordsCompletion from './keyword';
+import { NSDatabase } from '@sqltools/types';
+import { IConnectionDriver, MConnectionExplorer, ContextValue, Arg0} from '@sqltools/types';
+import { v4 as generateId } from 'uuid';
+import keywordsCompletion from './keyword';
 
 
 
@@ -90,14 +90,14 @@ public async close() {
     }
 
   
-    // public async getChildrenForItem({ item, parent }: Arg0<IConnectionDriver['getChildrenForItem']>) {}
+    public async getChildrenForItem({ item, parent }: Arg0<IConnectionDriver['getChildrenForItem']>) {}
 
-    // private async getChildrenForGroup({ parent, item }: Arg0<IConnectionDriver['getChildrenForItem']>) {}
+    private async getChildrenForGroup({ parent, item }: Arg0<IConnectionDriver['getChildrenForItem']>) {}
 
-    // public async searchItems(itemType: ContextValue, search: string, _extraParams: any = {}): Promise<NSDatabase.SearchableItem[]> {}
+    public async searchItems(itemType: ContextValue, search: string, _extraParams: any = {}): Promise<NSDatabase.SearchableItem[]> {}
 
-    // private completionsCache: { [w: string]: NSDatabase.IStaticCompletion } = null;
-    // public getStaticCompletions = async () => {}
+    private completionsCache: { [w: string]: NSDatabase.IStaticCompletion } = null;
+    public getStaticCompletions = async () => {}
  
 
 

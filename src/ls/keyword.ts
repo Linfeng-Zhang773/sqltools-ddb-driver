@@ -102,7 +102,7 @@ const keywordsArray =
   'groupBy',
   'contextBy'
 ];
-
+//函数需要完成实现
 const keywordsCompletion: { [w: string]: NSDatabase.IStaticCompletion } = keywordsArray.reduce((agg, word) => {
     agg[word] = {
       label: word,

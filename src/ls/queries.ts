@@ -69,13 +69,7 @@ const fetchDatabases: IBaseQueries['fetchDatabases'] = queryFactory
 `
 const fetchTables: IBaseQueries['fetchTables'] = queryFactory
 `
-    T = table(extractTable(getClusterDFSDatabases()) AS name, extractDatabases(getClusterDFSDatabases()) AS database)
-    SELECT 
-    T.name AS label,
-    T.database AS database,
-    '${ContextValue.TABLE}' AS type,
-    FROM T
-    ORDER BY T.name
+    
 `;
 
 
